@@ -11,16 +11,16 @@ import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.ApplicationListener;
 
 @SpringBootApplication
-public class Web3BackendApplication  implements ApplicationListener<ApplicationReadyEvent> {
+public class Web3jSkunkApplication implements ApplicationListener<ApplicationReadyEvent> {
 
-	private static final Logger logger = LoggerFactory.getLogger(Web3BackendApplication.class.getSimpleName());
+	private static final Logger logger = LoggerFactory.getLogger(Web3jSkunkApplication.class.getSimpleName());
 	public static void main(String[] args) {
 		logger.info(E.BLUE_DOT + E.BLUE_DOT+ "My Java ERC-20 application is starting .... " + E.BLUE_DOT+ E.BLUE_DOT+ E.BLUE_DOT+ E.BLUE_DOT);
-		SpringApplication application = new SpringApplication(Web3BackendApplication.class);
+		SpringApplication application = new SpringApplication(Web3jSkunkApplication.class);
 		application.setBannerMode(Banner.Mode.OFF);
 		application.run(args);
 		logger.info(E.BLUE_DOT + E.BLUE_DOT+ " \uD83C\uDF4E \uD83C\uDF4E  \uD83C\uDF4E  \uD83C\uDF4E " +
-				"Web3BackendApplication: ERC-20/DeFi application HAS started!.... " + E.LEAF+ E.LEAF+ E.LEAF+ E.LEAF);
+				"Web3jSkunkApplication: ERC-20/DeFi application HAS started!.... " + E.LEAF+ E.LEAF+ E.LEAF+ E.LEAF);
 	}
 
 
@@ -32,7 +32,7 @@ public class Web3BackendApplication  implements ApplicationListener<ApplicationR
 
 	@Override
 	public void onApplicationEvent(ApplicationReadyEvent event) {
-		logger.info(E.BLUE_DOT + E.BLUE_DOT+ "onApplicationEvent: ...  ✳️  ✳️  ✳️  ✳️ getWebApplicationType: "
+		logger.info(E.BLUE_DOT + E.BLUE_DOT+ "onApplicationEvent: ...  ✳️  ✳️  ✳️  ✳️ WebApplicationType: "
 				+ event.getSpringApplication().getWebApplicationType().name() + " " +E.DICE+ E.DICE);
 		logger.info(E.BLUE_DOT + E.BLUE_DOT+ "onApplicationEvent: ... " +
 				"\uD83D\uDD06 \uD83D\uDD06 \uD83D\uDD06 nodeEndpoint: "

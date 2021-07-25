@@ -34,7 +34,7 @@ public class Web3Controller {
         logger.info(E.ANGRY +E.ANGRY +E.ANGRY + "Web3Controller : /createWallet requested.... " + E.BLUE_DOT + E.BLUE_DOT);
         try {
             WalletFile walletFile = web3Service.createWallet(password);
-            return ResponseEntity.accepted().body(walletFile);
+            return ResponseEntity.ok().body(walletFile);
         } catch (Exception e) {
             return ResponseEntity.badRequest().body("We done fucked up! " + e.getMessage());
         }

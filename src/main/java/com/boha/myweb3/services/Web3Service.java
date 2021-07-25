@@ -1,9 +1,7 @@
 package com.boha.myweb3.services;
 
-import com.boha.myweb3.HelloWorld;
 import com.boha.myweb3.models.WalletFile;
 import com.boha.myweb3.mongo.MongoService;
-import com.boha.myweb3.mongo.WalletFileRepository;
 import com.boha.myweb3.util.E;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -145,7 +143,7 @@ public class Web3Service {
         //Web3j web3j = Web3j.build(new HttpService("<your_node_url>"));
         Credentials credentials = WalletUtils.loadCredentials("piot123", file);
         String greeting;
-        HelloWorld helloWorld = HelloWorld.load(fromAddress, web3j, credentials, new DefaultGasProvider());
+        contracts.HelloWorld helloWorld = contracts.HelloWorld.load(fromAddress, web3j, credentials, new DefaultGasProvider());
         if (helloWorld.isValid()) {
             greeting = helloWorld.greeting().send();
         }

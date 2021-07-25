@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class Web3BackendApplicationTests {
+class Web3JSkunkApplicationTests {
 
 	@Test
 	void contextLoads() {
