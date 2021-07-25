@@ -1,0 +1,15 @@
+source $HOME/.web3j/source.sh
+
+
+WALLETS CREATED BY WEB3J CLI
+Wallet file UTC--2021-07-24T14-26-19.929270000Z--fd661af1016caf5ebe91dc107b7694df8fa7fb2a.json successfully created in: /Users/aubs/Library/Ethereum/testnet/keystore
+Wallet file UTC--2021-07-24T14-56-23.877705000Z--09e47f6d2e73a5e828e9f8faddcd2a09c9e228bd.json successfully created in: /Users/aubs/Library/Ethereum/testnet/keystore
+
+password: kktiger3
+
+COMPILE SOLIDITY CONTRACTS
+solc src/main/resources/solidity/HelloWorld.sol --bin --abi -o src/main/resources/solidity/
+
+GENERATE JAVA WRAPPERS
+
+web3j generate solidity -a src/main/resources/solidity/HelloWorld.abi -b src/main/resources/solidity/HelloWorld.bin -c HelloWorld -p contracts -o src/main/java/com/boha/myweb3/
