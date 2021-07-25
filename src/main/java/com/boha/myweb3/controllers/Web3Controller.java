@@ -8,6 +8,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import com.boha.myweb3.util.E;
 
@@ -30,7 +31,7 @@ public class Web3Controller {
     }
 
     @GetMapping("/createWallet")
-    public ResponseEntity<Object> createWallet(String password) {
+    public ResponseEntity<Object> createWallet(@RequestParam String password) {
         logger.info(E.ANGRY +E.ANGRY +E.ANGRY + "Web3Controller : /createWallet requested.... " + E.BLUE_DOT + E.BLUE_DOT);
         try {
             WalletFile walletFile = web3Service.createWallet(password);
